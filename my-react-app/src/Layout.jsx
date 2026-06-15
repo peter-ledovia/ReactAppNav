@@ -16,78 +16,10 @@ const menuItems = [
 ];
 
 
-// const drawer = (
-//         <List>
-//           {menuItems.map((item) => (
-//             <ListItem key={item.text} disablePadding>
-//               <ListItemButton 
-//                 component={Link} 
-//                 to={item.path}
-//                 selected={location.pathname === item.path}
-//               >
-//                 <ListItemIcon>{item.icon}</ListItemIcon>
-//                 <ListItemText primary={item.text} />
-//               </ListItemButton>
-//             </ListItem>
-//           ))}
-//         </List>
-
-// );
-
 export default function Layout() {
-  // const location = useLocation();
-  // const [mobileOpen, setMobileOpen] = React.useState(false);
-
-  // const handleDrawerToggle = () => {
-  //   setMobileOpen(!mobileOpen);
-  // };
-
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      {  
-          <LeftDrawer drawerWidth={drawerWidth}/>
-        //   <Box component="nav" sx={{ width: { md: drawerWidth }, flexShrink: { md: 0 } }}>
-        //       <AppBar position="fixed" sx={{ width: { md: `calc(100% - ${drawerWidth}px)` }, ml: { md: `${drawerWidth}px` } }}>
-        //           <Toolbar>
-        //           <IconButton color="inherit" edge="start" onClick={handleDrawerToggle} sx={{ mr: 2, display: { md: 'none' } }}>
-        //               <MenuIcon />
-        //           </IconButton>
-        //           <Typography variant="h6" noWrap component="div">
-        //               Movie App !
-        //           </Typography>
-        //           </Toolbar>
-        //       </AppBar>
-
-
-        //       <Drawer
-        //           variant="temporary"
-        //           open={mobileOpen}
-        //           onClose={handleDrawerToggle}
-        //           ModalProps={{ keepMounted: true }} // Better open performance on mobile
-        //           sx={{
-        //               display: { xs: 'block', md: 'none' },
-        //               '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-        //           }}
-        //           >
-        //       {drawer}
-        //       </Drawer>
-          
-        //   {/* This Drawer could be put in another component ! */}
-        //   <Drawer
-        //       variant="permanent"
-        //       sx={{
-        //       display: { xs: 'none', md: 'block' },
-        //           '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
-        //       }}
-        //       open
-        //   >
-        //       {drawer}
-        //   </Drawer>
-        // </Box> 
-        }
-
-
+    <Box sx={{ display: 'flex' }}> 
+     <LeftDrawer drawerWidth={drawerWidth}/>
       <Box component="main" sx={{ flexGrow: 1, p: 5, width: `calc(100% - ${drawerWidth}px)` }}>
         <Outlet />
       </Box>

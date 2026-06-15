@@ -6,8 +6,10 @@ import InfoIcon from '@mui/icons-material/Info';
 import SettingsIcon from '@mui/icons-material/Settings';
 import MenuIcon from '@mui/icons-material/Menu';
 
+const IconButtonStyle = {
+   mr: 2, display: { md: 'none' } 
+}
 const menuItems = [
-  /*{ text: 'Home', icon: <HomeIcon />, path: '/home' },*/
   { text: 'Movie List', icon: <InfoIcon />, path: '/' },
   { text: 'Admin Area', icon: <SettingsIcon />, path: '/AdminArea' },
 ];
@@ -43,7 +45,7 @@ function LeftDrawer(props) {
         <Box component="nav" sx={{ width: { md: props.drawerWidth }, flexShrink: { md: 0 } }}>
             <AppBar position="fixed" sx={{ width: { md: `calc(100% - ${props.drawerWidth}px)` }, ml: { md: `${props.drawerWidth}px` } }}>
                 <Toolbar>
-                <IconButton color="inherit" edge="start" onClick={handleDrawerToggle} sx={{ mr: 2, display: { md: 'none' } }}>
+                <IconButton color="inherit" edge="start" onClick={handleDrawerToggle} sx={IconButtonStyle}>
                     <MenuIcon />
                 </IconButton>
                 <Typography variant="h6" noWrap component="div">
